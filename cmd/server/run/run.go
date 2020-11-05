@@ -3,11 +3,12 @@ package run
 import (
 	"github.com/urfave/cli/v2"
 
-	"github.com/projecteru2/aa/config"
-	"github.com/projecteru2/aa/errors"
-	"github.com/projecteru2/aa/executor"
-	"github.com/projecteru2/aa/log"
-	"github.com/projecteru2/aa/store"
+	"github.com/projecteru2/pistage/config"
+	"github.com/projecteru2/pistage/errors"
+	"github.com/projecteru2/pistage/executor"
+	"github.com/projecteru2/pistage/log"
+	"github.com/projecteru2/pistage/metrics"
+	"github.com/projecteru2/pistage/store"
 )
 
 // Run .
@@ -22,12 +23,13 @@ func Run(fn cli.ActionFunc) cli.ActionFunc {
 			return errors.Trace(err)
 		}
 
-		err := fn(c)
-		if err != nil {
+		if err := fn(c); err != nil {
 			log.ErrorStack(err)
+			metrics.IncrError()
+			return errors.Trace(err)
 		}
 
-		return err
+		return nil
 	}
 }
 
@@ -40,6 +42,6 @@ func setup(filepaths []string) error {
 }
 
 // NewExecutor .
-func NewExecutor(c *cli.Context) executor.Executor {
+func NewExecutor(c *cli.Context) (executor.Executor, error) {
 	return executor.NewSimple()
 }

@@ -5,10 +5,10 @@ import (
 	"context"
 	"path/filepath"
 
-	"github.com/projecteru2/aa/action"
-	"github.com/projecteru2/aa/config"
-	"github.com/projecteru2/aa/errors"
-	"github.com/projecteru2/aa/store/meta"
+	"github.com/projecteru2/pistage/action"
+	"github.com/projecteru2/pistage/config"
+	"github.com/projecteru2/pistage/errors"
+	"github.com/projecteru2/pistage/store/meta"
 )
 
 type jobMeta struct {

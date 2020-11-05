@@ -6,8 +6,8 @@ import (
 	"github.com/coreos/etcd/clientv3"
 	"github.com/coreos/etcd/clientv3/concurrency"
 
-	"github.com/projecteru2/aa/errors"
-	"github.com/projecteru2/aa/sync"
+	"github.com/projecteru2/pistage/errors"
+	"github.com/projecteru2/pistage/sync"
 )
 
 // Mutex .

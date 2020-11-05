@@ -1,8 +1,8 @@
 package action
 
 import (
-	"github.com/projecteru2/aa/codec/json"
-	"github.com/projecteru2/aa/errors"
+	"github.com/projecteru2/pistage/codec/json"
+	"github.com/projecteru2/pistage/errors"
 )
 
 // Parameters .

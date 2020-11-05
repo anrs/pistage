@@ -3,7 +3,7 @@ package executor
 import (
 	"context"
 
-	"github.com/projecteru2/aa/action"
+	"github.com/projecteru2/pistage/action"
 )
 
 // Executor .

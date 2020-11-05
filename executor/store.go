@@ -4,8 +4,8 @@ import (
 	"context"
 	"sync"
 
-	"github.com/projecteru2/aa/action"
-	"github.com/projecteru2/aa/errors"
+	"github.com/projecteru2/pistage/action"
+	"github.com/projecteru2/pistage/errors"
 )
 
 // Store .

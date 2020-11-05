@@ -3,7 +3,7 @@ package uuid
 import (
 	guid "github.com/google/uuid"
 
-	"github.com/projecteru2/aa/errors"
+	"github.com/projecteru2/pistage/errors"
 )
 
 // New .

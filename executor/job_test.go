@@ -5,12 +5,12 @@ import (
 	"context"
 	"testing"
 
-	"github.com/projecteru2/aa/action"
-	"github.com/projecteru2/aa/executor/mocks"
-	"github.com/projecteru2/aa/orch"
-	orchmocks "github.com/projecteru2/aa/orch/mocks"
-	"github.com/projecteru2/aa/test/assert"
-	"github.com/projecteru2/aa/test/mock"
+	"github.com/projecteru2/pistage/action"
+	"github.com/projecteru2/pistage/executor/mocks"
+	"github.com/projecteru2/pistage/orch"
+	orchmocks "github.com/projecteru2/pistage/orch/mocks"
+	"github.com/projecteru2/pistage/test/assert"
+	"github.com/projecteru2/pistage/test/mock"
 )
 
 func TestJobAddShouldInheritResource(t *testing.T) {

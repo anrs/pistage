@@ -5,7 +5,7 @@ import (
 
 	"github.com/sirupsen/logrus"
 
-	"github.com/projecteru2/aa/errors"
+	"github.com/projecteru2/pistage/errors"
 )
 
 // Setup .

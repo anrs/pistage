@@ -3,9 +3,9 @@ package meta
 import (
 	"context"
 
-	"github.com/projecteru2/aa/config"
-	"github.com/projecteru2/aa/errors"
-	"github.com/projecteru2/aa/store"
+	"github.com/projecteru2/pistage/config"
+	"github.com/projecteru2/pistage/errors"
+	"github.com/projecteru2/pistage/store"
 )
 
 // Create .

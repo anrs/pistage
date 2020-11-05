@@ -5,7 +5,7 @@ import (
 
 	pb "github.com/projecteru2/core/rpc/gen"
 
-	"github.com/projecteru2/aa/config"
+	"github.com/projecteru2/pistage/config"
 )
 
 // ExecuteOptions .

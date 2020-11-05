@@ -4,7 +4,7 @@ import (
 	"bytes"
 	"text/template"
 
-	"github.com/projecteru2/aa/errors"
+	"github.com/projecteru2/pistage/errors"
 )
 
 // Command indicates a command within an image.

@@ -5,7 +5,7 @@ import (
 
 	"github.com/stretchr/testify/require"
 
-	"github.com/projecteru2/aa/errors"
+	"github.com/projecteru2/pistage/errors"
 )
 
 // NilError asserts the error is nil.

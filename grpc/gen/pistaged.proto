@@ -1,0 +1,13 @@
+syntax = "proto3";
+
+package pistaged;
+
+service Pistaged {
+  rpc Ping(Empty) returns (Pong) {};
+}
+
+message Empty {}
+
+message Pong {
+  string version = 1;
+}

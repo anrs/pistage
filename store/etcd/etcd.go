@@ -7,11 +7,11 @@ import (
 
 	"github.com/coreos/etcd/clientv3"
 
-	"github.com/projecteru2/aa/codec/json"
-	"github.com/projecteru2/aa/config"
-	"github.com/projecteru2/aa/errors"
-	"github.com/projecteru2/aa/log"
-	sync2 "github.com/projecteru2/aa/sync"
+	"github.com/projecteru2/pistage/codec/json"
+	"github.com/projecteru2/pistage/config"
+	"github.com/projecteru2/pistage/errors"
+	"github.com/projecteru2/pistage/log"
+	sync2 "github.com/projecteru2/pistage/sync"
 )
 
 // Etcd .

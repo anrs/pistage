@@ -3,9 +3,9 @@ package executor
 import (
 	"context"
 
-	"github.com/projecteru2/aa/action"
-	"github.com/projecteru2/aa/errors"
-	"github.com/projecteru2/aa/orch"
+	"github.com/projecteru2/pistage/action"
+	"github.com/projecteru2/pistage/errors"
+	"github.com/projecteru2/pistage/orch"
 )
 
 // Simple executor.
@@ -15,11 +15,10 @@ type Simple struct {
 }
 
 // NewSimple .
-func NewSimple() *Simple {
-	return &Simple{
-		orch:  orch.NewEru(),
-		store: &localStore{},
-	}
+func NewSimple() (simple *Simple, err error) {
+	simple = &Simple{store: &localStore{}}
+	simple.orch, err = orch.NewEru()
+	return
 }
 
 // AsyncStart .

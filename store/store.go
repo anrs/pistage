@@ -5,9 +5,9 @@ import (
 
 	"github.com/coreos/etcd/clientv3"
 
-	"github.com/projecteru2/aa/errors"
-	"github.com/projecteru2/aa/store/etcd"
-	"github.com/projecteru2/aa/sync"
+	"github.com/projecteru2/pistage/errors"
+	"github.com/projecteru2/pistage/store/etcd"
+	"github.com/projecteru2/pistage/sync"
 )
 
 // Store .

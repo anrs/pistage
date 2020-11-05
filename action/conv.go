@@ -1,7 +1,7 @@
 package action
 
 import (
-	"github.com/projecteru2/aa/errors"
+	"github.com/projecteru2/pistage/errors"
 )
 
 func mustString(dict map[string]interface{}, key string) (value string, exists bool, err error) {

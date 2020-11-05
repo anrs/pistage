@@ -1,6 +1,6 @@
 package mocks
 
-import "github.com/projecteru2/aa/store"
+import "github.com/projecteru2/pistage/store"
 
 // Mocks .
 func Mocks() (*Store, func()) {

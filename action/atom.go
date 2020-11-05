@@ -1,7 +1,7 @@
 package action
 
 import (
-	"github.com/projecteru2/aa/errors"
+	"github.com/projecteru2/pistage/errors"
 )
 
 // Atom is the simplest Action.

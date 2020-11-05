@@ -5,7 +5,7 @@ package mocks
 import (
 	context "context"
 
-	orch "github.com/projecteru2/aa/orch"
+	orch "github.com/projecteru2/pistage/orch"
 	mock "github.com/stretchr/testify/mock"
 )
 

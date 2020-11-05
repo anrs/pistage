@@ -1,6 +1,6 @@
 package meta
 
-import "github.com/projecteru2/aa/sync"
+import "github.com/projecteru2/pistage/sync"
 
 // Ver .
 type Ver struct {

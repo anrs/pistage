@@ -6,9 +6,10 @@ import (
 
 	"github.com/urfave/cli/v2"
 
-	"github.com/projecteru2/aa/cli/act"
-	"github.com/projecteru2/aa/errors"
-	"github.com/projecteru2/aa/ver"
+	"github.com/projecteru2/pistage/cmd/server/act"
+	"github.com/projecteru2/pistage/cmd/server/daemon"
+	"github.com/projecteru2/pistage/errors"
+	"github.com/projecteru2/pistage/ver"
 )
 
 func main() {
@@ -19,9 +20,10 @@ func main() {
 	app := cli.App{
 		Commands: []*cli.Command{
 			act.Command(),
+			daemon.Command(),
 		},
 		Flags:   globalFlags(),
-		Version: "v",
+		Version: ver.Version(),
 	}
 
 	if err := app.Run(os.Args); err != nil {

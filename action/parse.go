@@ -3,7 +3,7 @@ package action
 import (
 	"gopkg.in/yaml.v3"
 
-	"github.com/projecteru2/aa/errors"
+	"github.com/projecteru2/pistage/errors"
 )
 
 const (

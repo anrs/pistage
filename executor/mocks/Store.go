@@ -5,7 +5,7 @@ package mocks
 import (
 	context "context"
 
-	action "github.com/projecteru2/aa/action"
+	action "github.com/projecteru2/pistage/action"
 
 	mock "github.com/stretchr/testify/mock"
 )

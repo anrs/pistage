@@ -5,11 +5,12 @@ import (
 	"context"
 	"sync"
 
-	"github.com/projecteru2/aa/action"
-	"github.com/projecteru2/aa/config"
-	"github.com/projecteru2/aa/errors"
-	"github.com/projecteru2/aa/log"
-	"github.com/projecteru2/aa/orch"
+	"github.com/projecteru2/pistage/action"
+	"github.com/projecteru2/pistage/config"
+	"github.com/projecteru2/pistage/errors"
+	"github.com/projecteru2/pistage/log"
+	"github.com/projecteru2/pistage/orch"
+	"github.com/projecteru2/pistage/uuid"
 )
 
 // JobGroup .
@@ -84,12 +85,14 @@ func (g *JobGroup) run(ctx context.Context) {
 	<-mon
 }
 
-func (g *JobGroup) save(ctx context.Context) error {
-	g.id = "id"
+func (g *JobGroup) save(ctx context.Context) (err error) {
+	if g.id, err = uuid.New(); err != nil {
+		return
+	}
 
-	md, err := g.meta()
-	if err != nil {
-		return errors.Trace(err)
+	var md *jobMeta
+	if md, err = g.meta(); err != nil {
+		return
 	}
 
 	return md.save(ctx)

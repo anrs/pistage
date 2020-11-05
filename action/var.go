@@ -3,7 +3,7 @@ package action
 import (
 	"regexp"
 
-	"github.com/projecteru2/aa/errors"
+	"github.com/projecteru2/pistage/errors"
 )
 
 const minVarLength = 5

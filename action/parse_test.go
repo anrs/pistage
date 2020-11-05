@@ -3,7 +3,7 @@ package action
 import (
 	"testing"
 
-	"github.com/projecteru2/aa/test/assert"
+	"github.com/projecteru2/pistage/test/assert"
 )
 
 func TestParseAtomFailedAsCycleRef(t *testing.T) {

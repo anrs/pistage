@@ -1,4 +1,4 @@
-NS := github.com/projecteru2/aa
+NS := github.com/projecteru2/pistage
 BUILD := go build -race
 TEST := go test -count=1 -race -cover
 
@@ -8,17 +8,20 @@ LDFLAGS += -X "$(NS)/ver.Date=$(shell date +'%F %T %z')"
 
 PKGS := $$(go list ./...)
 
-.PHONY: all test build
+.PHONY: all test build grpc
 
 default: build
 
-build: build-server build-cli
+rundev: build
+	bin/pistaged --config dev.toml server
 
-build-server:
-	echo
+build: build-srv build-cli
+
+build-srv:
+	$(BUILD) -ldflags '$(LDFLAGS)' -o bin/pistaged cmd/server/server.go
 
 build-cli:
-	$(BUILD) -ldflags '$(LDFLAGS)' -o bin/aa-cli cli/cli.go
+	$(BUILD) -ldflags '$(LDFLAGS)' -o bin/pistagec cmd/client/client.go
 
 lint: fmt
 	golint $(PKGS)
@@ -40,3 +43,6 @@ ifdef RUN
 else
 	$(TEST) $(PKGS)
 endif
+
+grpc:
+	protoc --go_out=plugins=grpc:. grpc/gen/pistaged.proto

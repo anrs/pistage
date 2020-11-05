@@ -6,12 +6,12 @@ import (
 	"sync"
 	"time"
 
-	"github.com/projecteru2/aa/action"
-	"github.com/projecteru2/aa/errors"
-	"github.com/projecteru2/aa/log"
-	"github.com/projecteru2/aa/metrics"
-	"github.com/projecteru2/aa/orch"
-	"github.com/projecteru2/aa/uuid"
+	"github.com/projecteru2/pistage/action"
+	"github.com/projecteru2/pistage/errors"
+	"github.com/projecteru2/pistage/log"
+	"github.com/projecteru2/pistage/metrics"
+	"github.com/projecteru2/pistage/orch"
+	"github.com/projecteru2/pistage/uuid"
 )
 
 // Tasks .

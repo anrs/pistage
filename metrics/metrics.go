@@ -6,9 +6,9 @@ import (
 	"github.com/prometheus/client_golang/prometheus"
 	"github.com/prometheus/client_golang/prometheus/promhttp"
 
-	"github.com/projecteru2/aa/errors"
-	"github.com/projecteru2/aa/os"
-	"github.com/projecteru2/aa/str"
+	"github.com/projecteru2/pistage/errors"
+	"github.com/projecteru2/pistage/os"
+	"github.com/projecteru2/pistage/str"
 )
 
 var (
@@ -16,9 +16,9 @@ var (
 	DefaultLabels = []string{"host"}
 
 	// MetricHeartbeatCount .
-	MetricHeartbeatCount = "aa_heartbeat_total"
+	MetricHeartbeatCount = "pistage_heartbeat_total"
 	// MetricErrorCount .
-	MetricErrorCount = "aa_error_total"
+	MetricErrorCount = "pistage_error_total"
 
 	metr *Metrics
 )
@@ -30,8 +30,8 @@ func init() { // nolint
 	}
 
 	metr = New(hn)
-	metr.RegisterCounter(MetricErrorCount, "aa errors", nil)         // nolint
-	metr.RegisterCounter(MetricHeartbeatCount, "aa heartbeats", nil) // nolint
+	metr.RegisterCounter(MetricErrorCount, "pistage errors", nil)         // nolint
+	metr.RegisterCounter(MetricHeartbeatCount, "pistage heartbeats", nil) // nolint
 }
 
 // Metrics .
